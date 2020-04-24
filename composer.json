@@ -1,13 +1,13 @@
 {
-    "name": "statch/tenancy",
+    "name": "stacht/tenancy",
     "description": "Tenancy package",
     "license": "MIT",
     "authors": [{
         "name": "Corrado Striuli",
         "email": "corrado.striuli@gmail.com"
     }],
-    "homepage": "https://bitbucket.com/statch/tenancy",
-    "keywords": ["Laravel", "Tenancy", "Statch"],
+    "homepage": "https://bitbucket.com/stacht/tenancy",
+    "keywords": ["Laravel", "Tenancy", "Stacht"],
     "require": {
         "php": "^7.2",
         "illuminate/support": "~5.8.0|^6.0|^7.0"
@@ -19,18 +19,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Statch\\Tenancy\\": "src/"
+            "Stacht\\Tenancy\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Statch\\Tenancy\\Tests\\": "tests"
+            "Stacht\\Tenancy\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Statch\\Tenancy\\TenancyServiceProvider"
+                "Stacht\\Tenancy\\TenancyServiceProvider"
             ]
         }
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Statch\Tenancy\Models;
+namespace Stacht\Tenancy\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Statch\Tenancy\Contracts\Tenant as TenantContract;
+use Stacht\Tenancy\Contracts\Tenant as TenantContract;
 
 class Tenant extends Model implements TenantContract
 {
@@ -22,7 +22,7 @@ class Tenant extends Model implements TenantContract
     {
         parent::__construct($attributes);
 
-        $this->setTable(config('statch-tenancy.table'));
+        $this->setTable(config('stacht-tenancy.table'));
     }
 
     public function route($name, $parameters = [], $absolute = true)

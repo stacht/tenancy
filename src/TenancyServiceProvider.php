@@ -1,9 +1,9 @@
 <?php
 
-namespace Statch\Tenancy;
+namespace Stacht\Tenancy;
 
 use Illuminate\Support\ServiceProvider;
-use Statch\Tenancy\Contracts\Tenant as TenantContract;
+use Stacht\Tenancy\Contracts\Tenant as TenantContract;
 use Illuminate\Support\Collection;
 use Illuminate\Filesystem\Filesystem;
 
@@ -14,12 +14,12 @@ class TenancyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/statch-tenancy.php', 'statch-tenancy');
+        $this->mergeConfigFrom(__DIR__.'/../config/stacht-tenancy.php', 'stacht-tenancy');
 
         $manager = new TenantManager();
 
         $this->app->instance(TenantManager::class, $manager);
-        $this->app->bind(TenantContract::class, config('statch-tenancy.model'));
+        $this->app->bind(TenantContract::class, config('stacht-tenancy.model'));
     }
 
     /**
@@ -29,7 +29,7 @@ class TenancyServiceProvider extends ServiceProvider
     {
          // Publishing the configuration file.
         $this->publishes([
-            __DIR__.'/../config/statch-tenancy.php' => config_path('statch-tenancy.php'),
+            __DIR__.'/../config/stacht-tenancy.php' => config_path('stacht-tenancy.php'),
         ], 'config');
 
 

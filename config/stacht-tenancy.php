@@ -9,7 +9,7 @@ return [
     | Default tenant model
     |
     */
-    'model' => \Statch\Tenancy\Models\Tenant::class,
+    'model' => \Stacht\Tenancy\Models\Tenant::class,
 
      /*
     |--------------------------------------------------------------------------

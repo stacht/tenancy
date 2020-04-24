@@ -1,6 +1,6 @@
 <?php
 
-namespace Statch\Tenancy\Exceptions;
+namespace Stacht\Tenancy\Exceptions;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 

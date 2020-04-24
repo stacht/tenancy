@@ -1,9 +1,9 @@
 <?php
 
-namespace Statch\Tenancy\Middleware;
+namespace Stacht\Tenancy\Middleware;
 
 use Closure;
-use Statch\Tenancy\TenantManager;
+use Stacht\Tenancy\TenantManager;
 
 class EagerIdentification
 {

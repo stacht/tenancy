@@ -1,11 +1,11 @@
 <?php
 
-namespace Statch\Tenancy\Scopes;
+namespace Stacht\Tenancy\Scopes;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
-use Statch\Tenancy\TenantManager;
+use Stacht\Tenancy\TenantManager;
 
 class TenantOwnedScope implements Scope
 {
@@ -15,7 +15,7 @@ class TenantOwnedScope implements Scope
         $tenant = $manager->getTenant();
 
         if ($tenant && $tenant->id) {
-            $builder->where(config('statch-tenancy.default_tenant_column'), '=', $manager->getTenant()->id);
+            $builder->where(config('stacht-tenancy.default_tenant_column'), '=', $manager->getTenant()->id);
         }
     }
 

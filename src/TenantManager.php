@@ -1,10 +1,10 @@
 <?php
 
-namespace Statch\Tenancy;
+namespace Stacht\Tenancy;
 
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Validation\Rule;
-use Statch\Tenancy\Contracts\Tenant as TenantContract;
+use Stacht\Tenancy\Contracts\Tenant as TenantContract;
 
 class TenantManager
 {
@@ -26,7 +26,7 @@ class TenantManager
 
     public function loadTenant(string $identifier): bool
     {
-        $tenant = app(config('statch-tenancy.model'))->query()->where('slug', '=', $identifier)->first();
+        $tenant = app(config('stacht-tenancy.model'))->query()->where('slug', '=', $identifier)->first();
 
         if ($tenant) {
             $this->setTenant($tenant);
@@ -39,11 +39,11 @@ class TenantManager
 
     public static function unique($table, $column = 'NULL')
     {
-        return (new Rules\Unique($table, $column))->where(config('statch-tenancy.default_tenant_column'), $this->getTenant()->id);
+        return (new Rules\Unique($table, $column))->where(config('stacht-tenancy.default_tenant_column'), $this->getTenant()->id);
     }
 
     public static function exists($table, $column = 'NULL')
     {
-        return (new Rules\Exists($table, $column))->where(config('statch-tenancy.default_tenant_column'), $this->getTenant()->id);
+        return (new Rules\Exists($table, $column))->where(config('stacht-tenancy.default_tenant_column'), $this->getTenant()->id);
     }
 }

@@ -8,7 +8,7 @@ This package provides ...
 Via Composer
 
 ``` bash
-$ composer require statch/tenancy
+$ composer require stacht/tenancy
 ```
 
 ## Usage
@@ -45,5 +45,5 @@ If you discover any security related issues, please email corrado.striuli@gmail.
 
 MIT. Please see the [license file](license.md) for more information.
 
-[link-author]: https://bitbucket.com/statch
+[link-author]: https://bitbucket.com/stacht
 [link-contributors]: ../../contributors

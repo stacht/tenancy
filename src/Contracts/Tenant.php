@@ -1,6 +1,6 @@
 <?php
 
-namespace Statch\Tenancy\Contracts;
+namespace Stacht\Tenancy\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
 

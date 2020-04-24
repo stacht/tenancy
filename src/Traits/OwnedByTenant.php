@@ -1,12 +1,12 @@
 <?php
 
-namespace Statch\Tenancy\Traits;
+namespace Stacht\Tenancy\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Statch\Tenancy\Exceptions\ModelNotFoundForTenantException;
-use Statch\Tenancy\Scopes\TenantOwnedScope;
-use Statch\Tenancy\TenantManager;
+use Stacht\Tenancy\Exceptions\ModelNotFoundForTenantException;
+use Stacht\Tenancy\Scopes\TenantOwnedScope;
+use Stacht\Tenancy\TenantManager;
 
 trait OwnedByTenant
 {
@@ -15,7 +15,7 @@ trait OwnedByTenant
         static::addGlobalScope(new TenantOwnedScope());
 
         static::creating(function (Model $model) {
-            if (!$model->{config('statch-tenancy.default_tenant_column')} && !$model->relationLoaded('tenant')) {
+            if (!$model->{config('stacht-tenancy.default_tenant_column')} && !$model->relationLoaded('tenant')) {
                 $model->setRelation('tenant', app(TenantManager::class)->getTenant());
             }
 
@@ -25,7 +25,7 @@ trait OwnedByTenant
 
     public function tenant(): BelongsTo
     {
-        $this->belongsTo(Tenant::class, config('statch-tenancy.default_tenant_column'));
+        $this->belongsTo(Tenant::class, config('stacht-tenancy.default_tenant_column'));
     }
 
     /**
